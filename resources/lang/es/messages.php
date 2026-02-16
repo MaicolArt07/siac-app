@@ -1,0 +1,6 @@
+<?php
+return [
+    'This action is unauthorized.' => 'Esta acción no está autorizada.',
+    'Unauthorized' => 'No Autorizado',
+    'Acción No Autorizada' => 'Acción No Autorizada',
+];
