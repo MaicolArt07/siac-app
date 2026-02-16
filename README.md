@@ -1,238 +1,97 @@
-SIAC App – Sistema de Gestión de Condominios
+<!-- ============================= -->
+<!--           HEADER              -->
+<!-- ============================= -->
 
-Sistema web desarrollado para la empresa SIAC (Servicios Integrales en Administración de Condominios), orientado a la automatización de procesos administrativos, gestión de copropietarios, control de pagos y manejo financiero de condominios.
+<h1 align="center">🚀 SIAC-APP</h1>
 
-📌 Descripción del Proyecto
+<p align="center">
+  <strong>Sistema Integral de Administración y Control</strong><br>
+  Plataforma web desarrollada con Laravel para la gestión administrativa,
+  control de procesos y generación de reportes.
+</p>
 
-SIAC App es una aplicación web que permite administrar de forma eficiente la información relacionada con:
+<p align="center">
+  <img src="https://img.shields.io/badge/PHP-8.1+-blue?style=for-the-badge&logo=php" />
+  <img src="https://img.shields.io/badge/Laravel-10+-red?style=for-the-badge&logo=laravel" />
+  <img src="https://img.shields.io/badge/Livewire-3.x-purple?style=for-the-badge" />
+  <img src="https://img.shields.io/badge/MySQL-Database-orange?style=for-the-badge&logo=mysql" />
+  <img src="https://img.shields.io/badge/Status-Active-success?style=for-the-badge" />
+</p>
 
-Copropietarios
+---
 
-Pagos y deudas
+## 📌 Descripción del Proyecto
 
-Ingresos y egresos
+**SIAC-APP** es una aplicación web desarrollada para optimizar la administración interna de una organización, permitiendo:
 
-Usuarios del sistema
+- Gestión estructurada de registros
+- Control administrativo centralizado
+- Automatización de procesos
+- Generación dinámica de reportes
+- Interfaz moderna con componentes dinámicos (Livewire)
 
-Gestión administrativa general
+El sistema está construido bajo arquitectura MVC utilizando el framework Laravel.
 
-El sistema fue desarrollado bajo la metodología Proceso Unificado de Desarrollo de Software (PUDS/RUP), utilizando modelado UML y arquitectura cliente-servidor.
+---
 
-🎯 Objetivo General
+# 🏗️ Arquitectura del Sistema
 
-Desarrollar un sistema informático web que permita optimizar la gestión administrativa de condominios, proporcionando información clara, organizada y en tiempo real.
-
-🧩 Módulos del Sistema
-
-El sistema está compuesto por los siguientes módulos principales:
-
-1️⃣ Gestión Persona
-
-Registro de personas relacionadas con el condominio
-
-Edición y actualización de datos
-
-Eliminación de registros
-
-2️⃣ Gestión Copropietario
-
-Administración de información de propietarios
-
-Asociación con departamentos o unidades
-
-3️⃣ Gestión de Pago
-
-Registro de pagos
-
-Control de deudas
-
-Seguimiento de expensas
-
-Multas y penalizaciones
-
-4️⃣ Gestión Cuenta Nominal
-
-Registro de ingresos
-
-Registro de egresos
-
-Cálculo de totales acumulados por período
-
-5️⃣ Gestión Usuario
-
-Creación de cuentas de acceso
-
-Asignación de roles
-
-Control de permisos
-
-🏗 Arquitectura
-
-El sistema utiliza una arquitectura:
-
-Cliente – Servidor
-
-Aplicación Web
-
-Base de datos relacional
-
-Comunicación mediante HTTP
-
-🛠 Tecnologías Utilizadas
-
-PHP (Backend)
-
-MySQL (Base de datos)
-
-HTML5
-
-CSS / Bootstrap
-
-JavaScript
-
-XAMPP (Servidor local)
-
-UML (Modelado)
-
-Git & GitHub (Control de versiones)
-
-📊 Metodología de Desarrollo
-
-Se utilizó el Proceso Unificado (RUP/PUDS) con las siguientes fases:
-
-Inicio
-
-Levantamiento de requerimientos
-
-Identificación de casos de uso
-
-Elaboración
-
-Diseño de arquitectura
-
-Modelado UML
-
-Prototipo
-
-Construcción
-
-Desarrollo de módulos
-
-Implementación de base de datos
-
-Pruebas parciales
-
-Transición
-
-Pruebas finales
-
-Corrección de errores
-
-Implementación en entorno real
-
-📋 Requisitos del Sistema
-Requisitos de Software
-
-PHP >= 7.x
-
-MySQL >= 5.7
-
-Apache
-
-XAMPP o servidor equivalente
-
-Navegador web moderno
-
-⚙️ Instalación del Proyecto (Entorno Local)
-1️⃣ Clonar el repositorio
-git clone https://github.com/MaicolArt07/siac-app.git
-
-2️⃣ Mover el proyecto a la carpeta del servidor
-
-Copiar el proyecto dentro de:
-
-xampp/htdocs/
-
-3️⃣ Crear la Base de Datos
-
-Abrir phpMyAdmin
-
-Crear una nueva base de datos (ejemplo: siac_db)
-
-Importar el archivo .sql del proyecto
-
-4️⃣ Configurar conexión a base de datos
-
-Editar el archivo de configuración (ejemplo: config.php) y colocar:
-
-$host = "localhost";
-$user = "root";
-$password = "";
-$database = "siac_db";
-
-5️⃣ Ejecutar el sistema
-
-Abrir en el navegador:
-
-http://localhost/siac-app
-
-🔐 Acceso al Sistema
-
-El sistema cuenta con autenticación por usuario y contraseña.
-
-Ejemplo (si aplica):
-
-Usuario: admin
-Contraseña: admin123
-
-
-(Modificar según configuración real del proyecto)
-
-🧪 Pruebas del Sistema
-
-Se realizaron pruebas de:
-
-Casos de uso
-
-Gestión de persona
-
-Gestión de pago
-
-Validación de formularios
-
-Pruebas de integración de módulos
-
-📁 Estructura General del Proyecto
-siac-app/
+SIAC-APP
 │
-├── assets/
-├── config/
-├── controllers/
-├── models/
-├── views/
+├── app/
+│ ├── Http/
+│ ├── Livewire/
+│ ├── Models/
+│
 ├── database/
-└── index.php
+│ ├── migrations/
+│ ├── seeders/
+│
+├── resources/
+│ ├── views/
+│
+├── routes/
+│
+└── public/
 
 
-(La estructura puede variar según implementación real.)
+### Patrón utilizado:
+- MVC (Model - View - Controller)
+- Componentes dinámicos con Livewire
+- ORM Eloquent
+- Migraciones versionadas
 
-📈 Beneficios del Sistema
+---
 
-Automatización de procesos administrativos
+# 🧩 Módulos Principales
 
-Control financiero más preciso
+✔ Gestión de Usuarios  
+✔ Administración de Registros  
+✔ Notas de Recepción  
+✔ Generación de Reportes  
+✔ Panel Administrativo  
+✔ Control de Estados y Procesos  
+✔ Integración con IA (si aplica en reportes)  
 
-Información en tiempo real
+---
 
-Adaptable a otros condominios
+# ⚙️ Requisitos del Sistema
 
-Escalable
+Antes de instalar el proyecto necesitas:
 
-👨‍💻 Autor
+- PHP >= 8.1
+- Composer
+- Node.js >= 18
+- MySQL / MariaDB
+- Git
+- Servidor local (XAMPP, Laragon, etc.)
 
-Proyecto desarrollado como Trabajo Final de Grado (TFG).
+---
 
-📜 Licencia
+# 🚀 Instalación Paso a Paso
 
-Este proyecto es de uso académico.
-Puede adaptarse y mejorarse según necesidades de la empresa.
+## 1️⃣ Clonar repositorio
+
+```bash
+git clone https://github.com/MaicolArt07/siac-app.git
+cd siac-app
